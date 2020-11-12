@@ -1,8 +1,13 @@
 const express = require('express');
-const dotenv = require('dotenv')
-const app = express();
+const dotenv = require('dotenv');
 
-dotenv.config()
+const {connectDB} = require('./db');
+const app = express();
+dotenv.config();
+
+connectDB();
+
+
 
 app.get('/', (req, res) => {
     res.json( {msg: "Hello Nicholas"})
