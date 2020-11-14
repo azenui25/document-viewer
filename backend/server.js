@@ -7,16 +7,20 @@ const {connectDB} = require('./db');
 const app = express();
 dotenv.config();
 
+// const {createJwtToken} = require('./util/auth')
+
 connectDB();
 
+const {authenticate} = require('./middleware/auth')
+app.use(authenticate)
 
 
 app.get('/', (req, res) => {
-    res.json( {msg: "Hello Nicholas"})
+    res.json( {msg: "Hello Nicholas/graphql"})
 })
 
 app.use('/graphql',graphqlHTTP({
-    schema: schema,
+    schema: schema, 
     graphiql: true
 }) )
 

@@ -14,7 +14,7 @@ const {
   deleteDoc,
   updatePage,
   deletePage,
-} = require("./mutation")
+} = require("./mutations")
 
 // Define QueryType
 const QueryType = new GraphQLObjectType({

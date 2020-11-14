@@ -1,5 +1,5 @@
 const { DocType, PageType } = require("./types")
-
+// const jwt = require('jsonwebtoken');
 const { User, Doc, Page } = require("../models")
 const { GraphQLString } = require("graphql")
 
@@ -7,7 +7,7 @@ const { createJwtToken } = require("../util/auth")
 
 const register = {
   type: GraphQLString,
-  description: "Register new user",
+  description: "Register new user", 
   args: {
     username: { type: GraphQLString },
     email: { type: GraphQLString },
