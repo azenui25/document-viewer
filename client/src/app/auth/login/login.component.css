@@ -1,0 +1,119 @@
+.input-width {
+    width: 300px;
+  }
+  
+  .spacer {
+      padding: 10px;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+  
+  .max-size {
+    max-width: 400px;
+  }
+  
+  .align-right {
+    text-align: right;
+    width: 120px;
+  }
+  
+  .padding-none {
+    padding: 0%;
+  }
+  
+  a {
+    text-decoration: none;
+    color: coral;
+  }
+  
+  .signup-here{
+    font-weight: bold;
+    color: #7579ff !important;
+  }
+  
+  .forget-text{
+    font-weight: bold;
+    color: #ff0000a6 !important;
+  }
+  
+  
+  .background-image{
+    background-image: url(../../../assets/bg-01.jpg);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
+    
+    .login-form-logo{
+      font-size: 60px;
+      color: #333333;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 0 auto;
+      margin-bottom: -10px !important;
+    }
+    
+    .login-firsthalf{
+      background: -webkit-linear-gradient(top, #7579ff, #b224ef);
+    }
+    
+    .login-secondhalf{
+      height: 100%;
+    }
+    
+    .user-login-logo{
+      font-size: 80px;
+      height: auto;
+      width: auto;
+      color: rebeccapurple;
+    }
+    .agree-section{
+      margin: 15px;
+    }
+    .agree-text-color{
+      color: blue;
+    }
+    
+    mat-card-title{
+      color: #b224ef;
+      font-size: 24px !important;
+      font-weight: bold !important;
+    }
+  
+    .login-img{
+      width: 20rem;
+    }
+    
+    ::ng-deep .mat-checkbox .mat-checkbox-frame {
+      border-color: #b224ef;
+    }
+    ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-accent .mat-pseudo-checkbox-checked, .mat-accent .mat-pseudo-checkbox-indeterminate, .mat-pseudo-checkbox-checked, .mat-pseudo-checkbox-indeterminate {
+      background-color: blue !important; /* Red background for example */
+    }
+    
+    @media only screen and (min-width: 600px) {
+      .login-layout{
+        margin: 1rem;
+      }
+      .login-secondhalf{
+        margin: 0rem !important;
+      }
+    
+    }

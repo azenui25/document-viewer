@@ -1,0 +1,52 @@
+<div class="background-image">
+<section fxLayout="row" class="signup-layout">
+  <mat-card *ngIf="ishidemobile" fxLayout="column" fxLayoutAlign="end center" fxLayoutGap="20px" class="max-size signup-firsthalf">
+        <span class="signup-form-logo">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" class="user-signup-logo">account_circle</mat-icon>
+        </span>
+          <img src="../../../assets/signup-img.png" alt="sign-up" class="sign-up">
+    </mat-card>
+
+    <form #f="ngForm" (ngSubmit)="onSignup(f)">
+        <mat-card fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px" class="max-size signup-secondhalf" [ngStyle]="styleObject">
+            <mat-card-header>
+            <mat-card-title>Sign Up</mat-card-title>
+            </mat-card-header>
+        <mat-card-content fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" >
+                <mat-form-field class="input-width">
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text" ngModel name="firstName" required>
+                </mat-form-field>
+                <mat-form-field class="input-width">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text" ngModel name="lastName" required>
+                </mat-form-field>
+                <mat-form-field class="input-width">
+                    <mat-label>Phone number</mat-label>
+                    <input matInput type="number" ngModel name="phoneNumber" required>
+                </mat-form-field>
+                <mat-form-field class="input-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput email type="email" ngModel name="email" required #emailInput="ngModel">
+                    <mat-error *ngIf="emailInput.hasError('email')">Please input a valid email</mat-error>
+                </mat-form-field>
+                <mat-form-field class="input-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" ngModel name="password" minlength="6" required>
+                    <mat-hint>Password must be at least 6 characters.</mat-hint>
+                </mat-form-field>
+                <span class="agree-section">
+                    <mat-checkbox [(ngModel)]="agree" name="agree" required></mat-checkbox>
+                    <mat-label class="margin-left agree-text-color">By creating an account, you agree to our </mat-label>
+                    <a class="text-color" (click)="openDialog()">Terms & Conditions</a>
+                </span>
+        </mat-card-content>
+        <mat-card-actions fxFlexAlign="center">
+            <button class="input-width" *ngIf="!isLoading" mat-raised-button color="primary" type="submit" [disabled]="!f.valid">Signup</button>
+            <mat-spinner *ngIf="isLoading"></mat-spinner>
+        </mat-card-actions>
+        </mat-card>
+    </form>
+</section>
+
+</div>

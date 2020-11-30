@@ -1,0 +1,20 @@
+
+<div class="background-image">
+    <section fxLayout="row" class="verifymail-layout">
+      <mat-card *ngIf="ishidemobile" fxLayout="column" fxLayoutAlign="end center" fxLayoutGap="20px" class="max-size verifymail-firsthalf">
+            <span class="verifymail-form-logo">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" class="user-verifymail-logo">mail</mat-icon>
+            </span>
+              <img src="../../../assets/reset-pass.png" alt="Log-in" class="verifymail-img">
+        </mat-card>
+<mat-card class="max-size verifymail-secondhalf" [ngStyle]="styleObject">
+    <mat-card-title class="spacer">Reset Your Password</mat-card-title> <br>
+        <h3>We sent a reset password email to Example@gmail.com <br>
+            Please click the reset password link to set your new password.</h3>
+        <p>Didn't receive the email yet?</p>
+        <p>Please check your spam folder, or try again.</p>
+  
+</mat-card>
+</section>
+
+</div>

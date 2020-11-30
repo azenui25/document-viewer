@@ -1,0 +1,24 @@
+.input-width {
+    width: 300px;
+  }
+  
+  .spacer {
+      padding: 10px;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+  
+  .max-size {
+    max-width: 400px;
+  }
+  
+  .align-right {
+    text-align: right;
+    width: 120px;
+  }
+  
+  .padding-none {
+    padding: 0%;
+  }
